@@ -49,7 +49,7 @@ def query_mongo():
     print(query)
     database = request.args.get('database')
     print(database)
-    # driver='{MongoDB Unicode ODBC 1.4.2}',server='18.219.52.254',database=database,port='3307',user='usr',password='pwd'
+    # driver='{MongoDB Unicode ODBC 1.4.2}',server='1.2.3.4',database=database,port='3307',user='usr',password='pwd' for interacting with MongoDB Bi Connector in the Ec2 instance
     print("connecting")
     try:
         connection = connect_mongodb(database)
