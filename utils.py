@@ -60,7 +60,8 @@ class connect_mongodb():
     def __init__(self,database = "database"):
         print("Iam working")
         driver="{"+"MongoDB ODBC Driver"+"}"
-        self.db = pyodbc.connect('DRIVER={MongoDB ODBC Driver};Server=18.219.52.254;Port=3307;User=userName;Password=pwd;Database=' + database, autocommit=True)
+        #connection
+        self.db = pyodbc.connect('DRIVER={MongoDB ODBC Driver};Server=1.2.3.4;Port=3307;User=userName;Password=pwd;Database=' + database, autocommit=True)
         print("connected")
         self.cursor = self.db.cursor()
 
