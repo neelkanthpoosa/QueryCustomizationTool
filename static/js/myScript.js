@@ -81,10 +81,7 @@ function displayData() {
             var responseText = xmlHttp.responseText;
             var obj = JSON.parse(responseText);
             createDataTable(obj);
-            // var data = "Res: " + "\n";
-            // for (var o in obj['result']) {
-            //     data += obj['result'][o] + "\n";
-            // }
+ 
             var time = obj['query_time'];
             // document.getElementById("result").innerHTML = data;
             document.getElementById("time_elapsed").innerHTML = time;
