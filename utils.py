@@ -33,7 +33,7 @@ class connect_mysql():
 
 
 class connect_redshift():
-    def __init__(self, host="localhost", database='database', user='awsuser', password='Cs123456', port=5439):
+    def __init__(self, host="localhost", database='database', user='awsuser', password='1234', port=5439):
         print("I am working")
         self.con = psycopg2.connect(host=host, dbname=database, port=port, password=password, user=user)
         self.cur = self.con.cursor()
@@ -60,7 +60,7 @@ class connect_mongodb():
     def __init__(self,database = "database"):
         print("Iam working")
         driver="{"+"MongoDB ODBC Driver"+"}"
-        self.db = pyodbc.connect('DRIVER={MongoDB ODBC Driver};Server=18.219.52.254;Port=3307;User=chai;Password=mongo123;Database=' + database, autocommit=True)
+        self.db = pyodbc.connect('DRIVER={MongoDB ODBC Driver};Server=18.219.52.254;Port=3307;User=userName;Password=pwd;Database=' + database, autocommit=True)
         print("connected")
         self.cursor = self.db.cursor()
 
