@@ -9,8 +9,8 @@ app = Flask(__name__)
 def query_mysql():
     query = request.args.get('query', 'show tables;')
     database = request.args.get('database')
-    connection = connect_mysql(host='database-1.c5ov2h84nuch.us-east-2.rds.amazonaws.com', user='admin',
-                               password='Awsdbs10!', db=database)
+    connection = connect_mysql(host='database-1.xxxx.amazonaws.com', user='admin',
+                               password='pwd', db=database)
     try:
         col_name, content, query_time = connection.run_query(query)
         result = {'col_name': col_name, 'result': content, 'query_time': query_time}
@@ -29,8 +29,8 @@ def query_redshift():
     database = request.args.get('database')
     print("database is " + database)
     try:
-        connection = connect_redshift(host='redshift-cluster-1.ckay2097thwx.us-east-2.redshift.amazonaws.com', user='admin',
-                                    password='Awsdbs10!',
+        connection = connect_redshift(host='redshift-cluster-1.xxxx.amazonaws.com', user='admin',
+                                    password='pwd',
                                     database=database)
         col_name, content, query_time = connection.run_query(query)
         result = {'col_name': col_name, 'result': content, 'query_time': query_time}
@@ -49,7 +49,7 @@ def query_mongo():
     print(query)
     database = request.args.get('database')
     print(database)
-    # driver='{MongoDB Unicode ODBC 1.4.2}',server='18.219.52.254',database=database,port='3307',user='neel',password='mongo123'
+    # driver='{MongoDB Unicode ODBC 1.4.2}',server='18.219.52.254',database=database,port='3307',user='usr',password='pwd'
     print("connecting")
     try:
         connection = connect_mongodb(database)
