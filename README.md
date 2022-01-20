@@ -1,5 +1,5 @@
 # QueryCustomizationTool
-Application for SQL querying multiple Database Management Softwares(AWS RDS, AWS Redshift, MongoDB), with corresponding databases.
+Application for SQL querying of multiple Database Management Softwares(AWS RDS, AWS Redshift, MongoDB), with corresponding databases.
 
 - Used MongoDB BI Connector to interact with mongod in the EC2 instance.
   - This gives us a SQL interface to communicate from the web-app.
@@ -26,7 +26,7 @@ Application for SQL querying multiple Database Management Softwares(AWS RDS, AWS
 
 
 
-## Similarly, SQL querying AWS Redshift DBMS, SQL querying on MongoDB can be done. 
+## Similarly, SQL querying on AWS Redshift DBMS, SQL querying on MongoDB can be done. 
    - Below are the databases available for each DBMS:
 
 <img width="1440" alt="Screenshot 2021-12-07 at 5 01 09 PM" src="https://user-images.githubusercontent.com/35606645/150240416-4f4078d5-01bd-418a-a93b-f341a375fff6.png">
